@@ -35,7 +35,7 @@ Before you begin, ensure you have met the following requirements:
    npm install
 
    cd ../admin
-   nom install
+   npm install
    
 5. Run both the client and server:
    ```bash
