@@ -20,7 +20,7 @@ Before you begin, ensure you have met the following requirements:
 
 2. Navigate to the project directory:
    ```bash
-   cd food_delivery_mern
+   cd hungryhive
 3. Set up environment variables in the .env file for MongoDB connection string , jwt key and Stripe API keys.
    ```bash
    MONGODB_URI=
