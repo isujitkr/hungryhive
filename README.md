@@ -1,4 +1,4 @@
-# Food Delivery App - HungryHive
+# Food Delivery Web App - HungryHive
 
 Welcome to the Food Delivery App built on the MERN stack! This project consists of three main folders: Admin, Frontend, and Backend.
 Below you'll find a comprehensive guide on setting up, running, and understanding each component of the application.
