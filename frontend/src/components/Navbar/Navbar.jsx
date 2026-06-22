@@ -1,8 +1,8 @@
-import React, { useContext, useState } from 'react';
-import './Navbar.css'
-import { assets } from '../../assets/assets';
-import {Link, useNavigate} from 'react-router-dom'
-import { StoreContext } from '../../context/StoreContext';
+import React, { useContext, useState } from "react";
+import "./Navbar.css";
+import { assets } from "../../assets/assets";
+import { Link, useNavigate } from "react-router-dom";
+import { StoreContext } from "../../context/StoreContext";
 
 const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
@@ -18,13 +18,22 @@ const Navbar = ({ setShowLogin }) => {
   
   return (
     <div className="navbar">
-      <Link to="/">
+      <Link
+        to="/"
+        onClick={() => {
+          setMenu("home");
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+      >
         <img src={assets.logo} className="logo" />
       </Link>
       <ul className="navbar-menu">
         <Link
           to="/"
-          onClick={() => setMenu("home")}
+          onClick={() => {
+            setMenu("home");
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
           className={menu === "home" ? "active" : ""}
         >
           Home
