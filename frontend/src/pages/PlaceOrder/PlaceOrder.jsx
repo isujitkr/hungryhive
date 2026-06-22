@@ -56,7 +56,7 @@ const PlaceOrder = () => {
 
   useEffect(() => {
     if (!token) {
-      navigate('/cart');
+      setShowLogin(true);
     }
     else if (getTotalCartAmount() === 0) {
       navigate('/cart');

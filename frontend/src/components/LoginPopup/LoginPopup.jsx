@@ -24,6 +24,14 @@ const LoginPopup = ({ setShowLogin }) => {
     };
   }, []);
 
+  const resetForm = () => {
+    setData({
+      name: "",
+      email: "",
+      password: "",
+    });
+  };
+
   const onChangeHandler = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -110,12 +118,19 @@ const LoginPopup = ({ setShowLogin }) => {
         {currState === "Login" ? (
           <p>
             Create a new account?{" "}
-            <span onClick={() => setCurrState("Sign Up")}>Click here</span>
+            <span onClick={() => {
+              setCurrState("Sign Up");
+              resetForm();
+            }}
+            >Click here</span>
           </p>
         ) : (
           <p>
             Already have an account?{" "}
-            <span onClick={() => setCurrState("Login")}>Login here</span>
+            <span onClick={() => {
+              setCurrState("Login");
+              resetForm();
+            }}>Login here</span>
           </p>
         )}
       </form>
